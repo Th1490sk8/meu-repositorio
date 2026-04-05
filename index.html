@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio - Thiago Leonice Barbosa | Astroturismo com Formação UFSC/IFRJ</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial', 'Calibri', sans-serif;
+            background-color: #e6e6e6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .documento {
+            max-width: 1100px;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 50px 40px;
+            border-radius: 4px;
+        }
+        .cabecalho-edital {
+            text-align: right;
+            font-size: 11px;
+            color: #333;
+            border-bottom: 2px solid #1a4d8c;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        .titulo-principal {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a4d8c;
+            margin-bottom: 5px;
+        }
+        .subtitulo {
+            text-align: center;
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+        .tabela-dados {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            font-size: 13px;
+        }
+        .tabela-dados td, .tabela-dados th {
+            border: 1px solid #aaa;
+            padding: 8px 12px;
+            vertical-align: top;
+        }
+        .tabela-dados th {
+            background-color: #eef4ff;
+            width: 30%;
+            text-align: left;
+        }
+        h2 {
+            font-size: 18px;
+            color: #1a4d8c;
+            border-left: 4px solid #ff8c00;
+            padding-left: 12px;
+            margin: 25px 0 15px 0;
+        }
+        .card-imagem {
+            margin: 30px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .card-imagem img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            background-color: #f5f5f5;
+            display: block;
+        }
+        .legenda {
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            font-size: 12px;
+            border-top: 1px solid #eee;
+            line-height: 1.5;
+            color: #2c2c2c;
+        }
+        .legenda strong {
+            color: #1a4d8c;
+        }
+        .tabela-eventos, .tabela-certificados {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+        .tabela-eventos th, .tabela-eventos td,
+        .tabela-certificados th, .tabela-certificados td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            text-align: left;
+        }
+        .tabela-eventos th, .tabela-certificados th {
+            background-color: #eef4ff;
+        }
+        .badge {
+            background-color: #1a4d8c;
+            color: white;
+            font-size: 10px;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .badge-verde {
+            background-color: #2e7d32;
+            color: white;
+            font-size: 10px;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .badge-laranja {
+            background-color: #e65100;
+            color: white;
+            font-size: 10px;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .destaque-numero {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a4d8c;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .declaracao {
+            margin-top: 35px;
+            padding: 20px;
+            background-color: #fef7e0;
+            border-left: 4px solid #ff8c00;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .assinatura {
+            margin-top: 30px;
+            text-align: right;
+            font-size: 12px;
+        }
+        .anexos {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 12px;
+        }
+        .impacto-box {
+            background-color: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .impacto-item {
+            flex: 1;
+            padding: 10px;
+            min-width: 120px;
+        }
+        .impacto-numero {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        .impacto-texto {
+            font-size: 11px;
+            color: #555;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 10px;
+            color: #888;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .documento { box-shadow: none; padding: 1.5cm; max-width: 100%; }
+            .card-imagem { break-inside: avoid; page-break-inside: avoid; }
+            .impacto-box { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+<div class="documento">
+    
+    <div class="cabecalho-edital">
+        ANEXO 06 – PORTFÓLIO DE ATUAÇÃO ARTÍSTICA E CULTURAL<br>
+        Edital Fluxos Fluminenses 2026 – Nº 09/2026 | SECEC/RJ
+    </div>
+
+    <div class="titulo-principal">PORTFÓLIO – THIAGO LEONICE BARBOSA</div>
+    <div class="subtitulo">
+        Astroturismo Científico no Pico das Agulhas Negras 
+        <span class="badge">UFSC Astronomia</span>
+        <span class="badge">UFSC Astrofísica</span>
+        <span class="badge">Rio Innovation Week 2023</span>
+        <span class="badge-verde">♿ Acessível</span>
+        <span class="badge-laranja">🌿 Baixo Impacto</span>
+    </div>
+
+    <table class="tabela-dados">
+        <tr><th>Nome completo</th><td>Thiago Leonice Barbosa</td>
+        <tr><th>Tipo de proponente</th><td>MEI – Microempreendedor Individual</td>
+        <tr><th>CNAE principal</th><td>7912-1/00 – Guia de turismo</td>
+        <tr><th>Município de sede</th><td>Resende – RJ (Região do Médio Paraíba)</td>
+        <tr><th>Formação técnica</th><td>Guia de Turismo CADASTUR</td>
+        <tr><th>Instagram profissional</th><td><a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" style="color: #1a4d8c; text-decoration: none;">@astroturismo.agulhasnegras</a></td>
+    </table>
+
+    <!-- BOX DE IMPACTO (NOVO) -->
+    <div class="impacto-box">
+        <div class="impacto-item">
+            <div class="impacto-numero">70h</div>
+            <div class="impacto-texto">Formação UFSC<br>Astronomia + Astrofísica</div>
+        </div>
+        <div class="impacto-item">
+            <div class="impacto-numero">50+</div>
+            <div class="impacto-texto">Participantes<br>atendidos</div>
+        </div>
+        <div class="impacto-item">
+            <div class="impacto-numero">2</div>
+            <div class="impacto-texto">UCs parceiras<br>PN Itatiaia + PEP Mauá</div>
+        </div>
+        <div class="impacto-item">
+            <div class="impacto-numero">100%</div>
+            <div class="impacto-texto">Eventos com<br>acessibilidade e baixo impacto</div>
+        </div>
+    </div>
+
+    <h2>1. MEMORIAL DESCRITIVO DA TRAJETÓRIA</h2>
+    <p style="font-style: italic; color: #1a4d8c; margin-bottom: 15px;">🎯 <strong>“Unindo ciência, cultura e sustentabilidade para levar o céu do Pico das Agulhas Negras a todos.”</strong></p>
+    <p>Sou <strong>Thiago Leonice Barbosa</strong>, Técnico em Turismo com foco <strong>em Astronomia</strong>. Completei o <strong>Curso de Astronomia e Astronáutica (20h)</strong> e o <strong>Curso de Astrofísica Geral – nível Georges Lemaître (50h)</strong>, onde estudei introdução à Astronomia, observação do céu, sistema solar, estrelas, galáxias, cosmologia e astrobiologia.</p>
+    <p style="margin-top: 12px;">Minha trajetória artístico-cultural combina <strong>guia de montanha noturno, astrofotógrafo documental e educador ambiental</strong>, com embasamento científico sólido. Atuo há mais de 2 anos na região do Pico das Agulhas Negras, abrangendo a parte alta do <strong>Parque Nacional do Itatiaia (PN Itatiaia)</strong> e o <strong>Parque Estadual da Pedra Selada – PEP em Mauá</strong> (Visconde de Mauá, Resende/RJ). <strong>Ao longo dessa trajetória, já atendi diretamente mais de 50 participantes</strong>, promovendo não apenas a observação científica, mas também a preservação do Meio Ambiente.</p>
+    <p style="margin-top: 12px;">Em 2023, participei da palestra <strong>"Ciência nas trilhas: desafios e potenciais para conservação da natureza"</strong>, promovida pelo <strong>IFRJ Campus Avançado Resende</strong>, que aprofundou minha compreensão sobre a interface entre turismo de aventura, educação ambiental e conservação de Unidades de Conservação.</p>
+    <p style="margin-top: 12px;">Também em 2023, fui contemplado com ingresso institucional pelo <strong>IFRJ para o Rio Innovation Week</strong>, um dos maiores eventos de tecnologia e inovação do Brasil, onde atualizei conhecimentos sobre turismo 4.0, realidade aumentada aplicada à interpretação do céu noturno e gamificação para grupos.</p>
+    <p style="margin-top: 12px;">Além dos eventos em Unidades de Conservação de altitude, realizei <strong>ações gratuitas de astroturismo urbano no Parque das Águas, em Resende</strong> (2024), abertas ao público geral, democratizando o acesso à ciência astronômica. <strong>Todos os meus eventos seguem protocolos de acessibilidade (adaptação para pessoas com mobilidade reduzida, materiais em áudio descrição) e baixo impacto ambiental: sem fogueiras, sem lixo e sem luz branca.</strong></p>
+
+    <h2>2. FORMAÇÃO TÉCNICA E CIENTÍFICA</h2>
+    <table class="tabela-certificados">
+        <thead><tr><th>Certificação</th><th>Instituição</th><th>Carga horária</th><th>Período</th><th>Tópicos principais</th></tr></thead>
+        <tbody>
+            <tr><td>Curso de Astrofísica Geral (Georges Lemaître)</td><td>UFSC – PROEX</td><td>50h</td><td>04/2018 a 04/2019</td><td>Instrumentos astrofísicos, exoplanetas, Via Láctea, cosmologia, astrobiologia</td></tr>
+            <tr><td>Curso de Astronomia e Astronáutica (Galileu Galilei)</td><td>UFSC – PROEX</td><td>20h</td><td>09/2019 a 08/2020</td><td>Observação do céu, Sistema Solar, estrelas, galáxias, foguetes, programa espacial brasileiro</td></tr>
+            <tr><td>Palestra: Ciência nas trilhas</td><td>IFRJ – Campus Resende</td><td>1h</td><td>23/03/2023</td><td>Conservação da natureza, turismo de aventura, educação ambiental</td></tr>
+            <tr><td>Rio Innovation Week – 3ª edição</td><td>IFRJ / Rio de Janeiro</td><td>Evento</td><td>03/10/2023</td><td>Turismo 4.0, inovação.</td></tr>
+        </tbody>
+    </table>
+
+    <h2>3. REGISTRO FOTOGRÁFICO DAS AÇÕES REALIZADAS</h2>
+    <p style="font-size: 12px; margin-bottom: 10px;"><strong>📸 Imagens em ordem cronológica (da mais antiga à mais recente)</strong></p>
+
+    <div class="card-imagem">
+        <img src="WhatsApp Image 2026-04-05 at 13.59.50 (1).jpeg" alt="Rio Innovation Week 2023" onerror="this.src='https://placehold.co/800x400?text=FOTO+1'">
+        <div class="legenda"><strong>Imagem 1</strong><br><strong>Data:</strong> 03/10/2023 | <strong>Local:</strong> Rio Innovation Week 2023 – Rio de Janeiro/RJ<br>Participação com ingresso institucional pelo IFRJ. Atualização em turismo 4.0.</div>
+    </div>
+
+    <div class="card-imagem">
+        <img src="WhatsApp Image 2026-04-05 at 13.59.50.jpeg" alt="Evento Parque das Águas" onerror="this.src='https://placehold.co/800x400?text=FOTO+2'">
+        <div class="legenda"><strong>Imagem 2</strong><br><strong>Data:</strong> 28/11/2024 | <strong>Local:</strong> Parque das Águas, Resende – RJ<br>Evento aberto e gratuito de astroturismo urbano em parceria com o poder público municipal.</div>
+    </div>
+
+    <div class="card-imagem">
+        <img src="WhatsApp Image 2026-04-05 at 13.59.51.jpeg" alt="Evento Parque das Águas 2" onerror="this.src='https://placehold.co/800x400?text=FOTO+3'">
+        <div class="legenda"><strong>Imagem 3</strong><br><strong>Data:</strong> 28/11/2024 | <strong>Local:</strong> Parque das Águas, Resende – RJ<br>Evento aberto e gratuito de astroturismo urbano. Público de diversas idades interagindo com os equipamentos, promovendo a democratização do acesso à astronomia.</div>
+    </div>
+
+    <div class="card-imagem">
+        <img src="WhatsApp Image 2026-04-05 at 13.26.17.jpeg" alt="Instagram - Astroturismo" onerror="this.src='https://placehold.co/800x400?text=FOTO+4'">
+        <div class="legenda"><strong>Imagem 4</strong><br><strong>Data:</strong> 09/12/2024 | <strong>Local:</strong> Pico das Agulhas Negras – PN Itatiaia<br>Postagem do perfil @astroturismo.agulhasnegras durante sessão de astrofotografia noturna.</div>
+    </div>
+
+    <div class="card-imagem">
+        <img src="WhatsApp Image 2026-04-05 at 13.26.16 (1).jpeg" alt="Instagram - @GEAN e amigos" onerror="this.src='https://placehold.co/800x400?text=FOTO+5'">
+        <div class="legenda"><strong>Imagem 5</strong><br><strong>Data:</strong> 09/12/2024 | <strong>Local:</strong> Pico das Agulhas Negras – PN Itatiaia<br>Postagem do perfil @astroturismo.agulhasnegras com interação do público (@GEAN e amigos). Registro de engajamento e comprovação de atividade presencial com participantes.</div>
+    </div>
+
+    <div class="card-imagem">
+        <img src="WhatsApp Image 2026-04-05 at 13.26.15.jpeg" alt="Observação Solar - PEP Mauá" onerror="this.src='https://placehold.co/800x400?text=FOTO+6'">
+        <div class="legenda"><strong>Imagem 6</strong><br><strong>Data:</strong> 19/07/2025 | <strong>Local:</strong> PEP Mauá, Resende/RJ<br>Instrução do uso do telescópio com filtros adequados para observação de manchas solares.</div>
+    </div>
+
+    <div class="card-imagem">
+        <img src="WhatsApp Image 2026-04-05 at 13.26.15 (1).jpeg" alt="Grupo com telescópio - PEP Mauá" onerror="this.src='https://placehold.co/800x400?text=FOTO+7'">
+        <div class="legenda"><strong>Imagem 7</strong><br><strong>Data:</strong> 19/07/2025 | <strong>Local:</strong> PEP Mauá, Resende/RJ<br>Grupo de participantes em atividade para observação de manchas solares.</div>
+    </div>
+
+    <div class="card-imagem">
+        <img src="WhatsApp Image 2026-04-05 at 13.26.16.jpeg" alt="Equipamentos" onerror="this.src='https://placehold.co/800x400?text=FOTO+8'">
+        <div class="legenda"><strong>Imagem 8</strong><br><strong>Data:</strong> 19/07/2025 | <strong>Local:</strong> Visconde de Mauá, Resende/RJ<br>Instrumentação: Telescópio para observação solar e noturna.</div>
+    </div>
+
+    <h2>4. LISTAGEM DE EVENTOS E FORMAÇÕES</h2>
+    <table class="tabela-eventos">
+        <thead><tr><th>Data</th><th>Local / Evento</th><th>Tipo de atividade</th><th>Natureza</th></tr></thead>
+        <tbody>
+            <tr><td>04/2018 a 04/2019</td><td>UFSC – Astrofísica Geral</td><td>Curso (50h)</td><td>Formação técnica</td></tr>
+            <tr><td>09/2019 a 08/2020</td><td>UFSC – Astronomia e Astronáutica</td><td>Curso (20h)</td><td>Formação técnica</td></tr>
+            <tr><td>23/03/2023</td><td>IFRJ – Ciência nas trilhas</td><td>Palestra (1h)</td><td>Formação complementar</td></tr>
+            <tr><td>03/10/2023</td><td>Rio Innovation Week – RJ</td><td>Participação / IFRJ</td><td>Formação profissional</td></tr>
+            <tr><td>28/11/2024</td><td>Parque das Águas, Resende</td><td>Astroturismo urbano (gratuito)</td><td>Gratuito / Público aberto</td></tr>
+            <tr><td>09/12/2024</td><td>PN Itatiaia (parte alta)</td><td>Observação + mitologia</td><td>Mediante agendamento</td></tr>
+            <tr><td>09/12/2024</td><td>Pico das Agulhas Negras</td><td>Sessão de astrofotografia</td><td>Mediante agendamento</td></tr>
+            <tr><td>19/07/2025</td><td>PEP Mauá</td><td>Observação de Manchas Solares</td><td>Mediante agendamento</td></tr>
+        </tbody>
+    </table>
+
+    <h2>5. DOCUMENTOS COMPROBATÓRIOS (ANEXOS)</h2>
+    <div class="anexos">
+        <p><strong>📄 Certificado UFSC – Astrofísica Geral (50h)</strong> – arquivo: <code>79399b88312bbea7b193e1a95de7ec84bb0fa3e5.pdf</code></p>
+        <p><strong>📄 Certificado UFSC – Astronomia e Astronáutica (20h)</strong> – arquivo: <code>23e397efdeb45c5edf344bfba33109ff49a28d8b.pdf</code></p>
+        <p><strong>📄 Certificado IFRJ – Ciência nas trilhas</strong> – arquivo: <code>Certificado THIAGO L BARBOSA.pdf</code></p>
+        <p><strong>📄 Comprovante Rio Innovation Week 2023</strong> – arquivo: <code>WhatsApp Image 2026-04-05 at 14.36.08.jpeg</code></p>
+    </div>
+
+    <h2>6. LINKS DE TRABALHOS ANTERIORES</h2>
+    <p>📸 <strong>Instagram profissional:</strong> <a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" style="color: #1a4d8c; text-decoration: none;">@astroturismo.agulhasnegras</a> – registros de eventos noturnos, astrofotografias e depoimentos de participantes.</p>
+    <p>🔭 <strong>Formação UFSC:</strong> Astronomia e Astrofísica – base científica para condução de eventos de observação celeste.</p>
+
+    <h2>7. DECLARAÇÃO DE VERACIDADE</h2>
+    <div class="declaracao">
+        <p>Declaro, sob as penas da Lei Federal nº 14.399/2022 e do Edital Fluxos Fluminenses 2026 nº 09/2026, que as informações, imagens e documentos apresentados neste portfólio são verdadeiros e correspondem fielmente à minha atuação profissional e formação técnica, incluindo os certificados da UFSC, IFRJ e participação no Rio Innovation Week 2023.</p>
+        <p style="margin-top: 10px;">Estou ciente de que a apresentação de informações falsas implicará a desclassificação imediata da proposta e as sanções administrativas previstas no item 18 do edital.</p>
+    </div>
+
+    <div class="assinatura">
+        Resende/RJ, ___ de abril de 2026.<br><br>
+        _________________________________<br>
+        <strong>Thiago Leonice Barbosa</strong><br>
+        MEI – Técnico em Turismo<br>
+        Formação: Astronomia e Astrofísica pela UFSC
+    </div>
+
+    <footer>
+        Portfólio elaborado em conformidade com o ANEXO 06 do Edital Fluxos Fluminenses 2026 – SECEC/RJ<br>
+        Formação UFSC (20h + 50h) | IFRJ | Rio Innovation Week 2023 | 8 imagens em ordem cronológica<br>
+        🌿 Ações com acessibilidade e baixo impacto ambiental | 🌌 Mais de 50 participantes atendidos
+    </footer>
+</div>
+</body>
+</html>
