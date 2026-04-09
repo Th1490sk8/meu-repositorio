@@ -93,6 +93,17 @@
         .legenda strong {
             color: #1a4d8c;
         }
+        .legenda-astros {
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            font-size: 12px;
+            border-top: 1px solid #eee;
+            line-height: 1.5;
+            color: #2c2c2c;
+        }
+        .legenda-astros strong {
+            color: #1a4d8c;
+        }
         .tabela-eventos, .tabela-certificados {
             width: 100%;
             border-collapse: collapse;
@@ -193,14 +204,30 @@
             font-size: 11px;
             color: #555;
         }
-        .destaque-gratuito {
-            background-color: #ff8c00;
+        .destaque-equipamento {
+            background-color: #1a4d8c;
             color: white;
             font-weight: bold;
-            padding: 4px 12px;
-            border-radius: 20px;
+            padding: 10px 15px;
+            border-radius: 8px;
             display: inline-block;
             margin: 10px 0;
+            font-size: 14px;
+        }
+        .tabela-telescopio {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+        .tabela-telescopio td, .tabela-telescopio th {
+            border: 1px solid #aaa;
+            padding: 8px;
+            vertical-align: top;
+        }
+        .tabela-telescopio th {
+            background-color: #eef4ff;
+            text-align: left;
         }
         footer {
             margin-top: 30px;
@@ -210,11 +237,42 @@
             border-top: 1px solid #ddd;
             padding-top: 15px;
         }
+        .instagram-link {
+            color: #1a4d8c;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #eef4ff;
+            padding: 2px 6px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .instagram-link:hover {
+            text-decoration: underline;
+            background-color: #ff8c00;
+            color: white;
+        }
+        .portfolio-link {
+            color: #ff8c00;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #fef7e0;
+            padding: 2px 6px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .portfolio-link:hover {
+            text-decoration: underline;
+            background-color: #1a4d8c;
+            color: white;
+        }
         @media print {
             body { background: white; padding: 0; margin: 0; }
             .documento { box-shadow: none; padding: 1.5cm; max-width: 100%; }
             .card-imagem { break-inside: avoid; page-break-inside: avoid; }
             .impacto-box { break-inside: avoid; }
+            .instagram-link, .portfolio-link { color: black; background: none; }
         }
     </style>
 </head>
@@ -240,6 +298,7 @@
     <table class="tabela-dados">
         <tr><th>Nome completo</th><td>Thiago Leonice Barbosa</td>
         <tr><th>Tipo de proponente</th><td>MEI – Microempreendedor Individual</td>
+        <tr><th>Nome da Proposta</th><td>Céu da Mantiqueira: Astroturismo</td>
         <tr><th>CNAE principal</th><td>7912-1/00 – Guia de turismo</td>
         <tr><th>Município de sede</th><td>Resende – RJ (Região do Médio Paraíba)</td>
         <tr><th>Formação técnica</th><td>Guia de Turismo CADASTUR | Astronomia UFSC | Astrofísica UFSC</td>
@@ -328,46 +387,46 @@
         <div class="legenda"><strong>Imagem 3</strong><br><strong>Data:</strong> 04/01/2024 | <strong>Local:</strong> CADASTUR / Detran-RJ<br>Crachá virtual de Guia de Turismo registrado no CADASTUR. Categorias: Guia Regional - RJ e Excursão Nacional - Brasil / América do Sul.</div>
     </div>
 
-    <!-- Imagem 4 - Parque das Águas -->
+    <!-- Imagem 4 - Parque das Águas com link Instagram -->
     <div class="card-imagem">
         <img src="WhatsApp Image 2026-04-05 at 13.59.50.jpeg" alt="Evento Parque das Águas" onerror="this.src='https://placehold.co/800x400?text=FOTO+4'">
-        <div class="legenda"><strong>Imagem 4</strong><br><strong>Data:</strong> 28/11/2024 | <strong>Local:</strong> Parque das Águas, Resende – RJ<br>Thiago Barbosa no evento aberto e gratuito de astroturismo urbano em parceria com o poder público municipal.</div>
+        <div class="legenda"><strong>Imagem 4</strong><br><strong>Data:</strong> 28/11/2024 | <strong>Local:</strong> Parque das Águas, Resende – RJ<br>Thiago Barbosa no evento aberto e gratuito de astroturismo urbano em parceria com o poder público municipal.<br><a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" class="instagram-link">📷 Ver mais no Instagram @astroturismo.agulhasnegras</a></div>
     </div>
 
-    <!-- Imagem 5 - Parque das Águas 2 -->
+    <!-- Imagem 5 - Parque das Águas 2 com link Instagram -->
     <div class="card-imagem">
         <img src="WhatsApp Image 2026-04-05 at 13.59.51.jpeg" alt="Evento Parque das Águas 2" onerror="this.src='https://placehold.co/800x400?text=FOTO+5'">
-        <div class="legenda"><strong>Imagem 5</strong><br><strong>Data:</strong> 28/11/2024 | <strong>Local:</strong> Parque das Águas, Resende – RJ<br>Evento aberto e gratuito de astroturismo urbano. Público de diversas idades interagindo com os equipamentos.</div>
+        <div class="legenda"><strong>Imagem 5</strong><br><strong>Data:</strong> 28/11/2024 | <strong>Local:</strong> Parque das Águas, Resende – RJ<br>Evento aberto e gratuito de astroturismo urbano. Público de diversas idades interagindo com os equipamentos.<br><a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" class="instagram-link">📷 Ver mais no Instagram @astroturismo.agulhasnegras</a></div>
     </div>
 
-    <!-- Imagem 6 - Instagram Astrofotografia -->
+    <!-- Imagem 6 - Instagram Astrofotografia com link -->
     <div class="card-imagem">
         <img src="WhatsApp Image 2026-04-05 at 13.26.17.jpeg" alt="Instagram - Astroturismo" onerror="this.src='https://placehold.co/800x400?text=FOTO+6'">
-        <div class="legenda"><strong>Imagem 6</strong><br><strong>Data:</strong> 09/12/2024 | <strong>Local:</strong> Pico das Agulhas Negras – PN Itatiaia<br>Postagem do perfil @astroturismo.agulhasnegras durante sessão de astrofotografia noturna.</div>
+        <div class="legenda"><strong>Imagem 6</strong><br><strong>Data:</strong> 09/12/2024 | <strong>Local:</strong> Pico das Agulhas Negras – PN Itatiaia<br>Postagem do perfil @astroturismo.agulhasnegras durante sessão de astrofotografia noturna.<br><a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" class="instagram-link">📷 Ver mais no Instagram @astroturismo.agulhasnegras</a></div>
     </div>
 
-    <!-- Imagem 7 - Instagram com @GEAN -->
+    <!-- Imagem 7 - Instagram com @GEAN com link -->
     <div class="card-imagem">
         <img src="WhatsApp Image 2026-04-05 at 13.26.16 (1).jpeg" alt="Instagram - @GEAN e amigos" onerror="this.src='https://placehold.co/800x400?text=FOTO+7'">
-        <div class="legenda"><strong>Imagem 7</strong><br><strong>Data:</strong> 09/12/2024 | <strong>Local:</strong> Pico das Agulhas Negras – PN Itatiaia<br>Postagem com interação do público (@GEAN e amigos). Registro de engajamento e atividade presencial.</div>
+        <div class="legenda"><strong>Imagem 7</strong><br><strong>Data:</strong> 09/12/2024 | <strong>Local:</strong> Pico das Agulhas Negras – PN Itatiaia<br>Postagem com interação do público (@GEAN e amigos). Registro de engajamento e atividade presencial.<br><a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" class="instagram-link">📷 Ver mais no Instagram @astroturismo.agulhasnegras</a></div>
     </div>
 
-    <!-- Imagem 8 - Observação Solar PEP Mauá -->
+    <!-- Imagem 8 - Observação Solar PEP Mauá com link -->
     <div class="card-imagem">
-        <img src="WhatsApp Image 2026-04-05 at 13.26.15.jpeg" alt="Observação Solar - PEP Mauá" onerror="this.src='https://placehold.co/800x400?text=FOTO+8'">
-        <div class="legenda"><strong>Imagem 8</strong><br><strong>Data:</strong> 19/07/2025 | <strong>Local:</strong> PEP Mauá, Resende/RJ<br>Instrução do uso do telescópio com filtros adequados para observação de manchas solares.</div>
+        <img src="foto8-observacao-solar.jpg" alt="Observação Solar - PEP Mauá" onerror="this.src='https://placehold.co/800x400?text=FOTO+8'">
+        <div class="legenda"><strong>Imagem 8</strong><br><strong>Data:</strong> 19/07/2025 | <strong>Local:</strong> PEP Mauá, Resende/RJ<br>Instrução do uso do telescópio com filtros adequados para observação de manchas solares.<br><a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" class="instagram-link">📷 Ver mais no Instagram @astroturismo.agulhasnegras</a></div>
     </div>
 
-    <!-- Imagem 9 - Grupo com telescópio -->
+    <!-- Imagem 9 - Grupo com telescópio com link -->
     <div class="card-imagem">
-        <img src="WhatsApp Image 2026-04-05 at 13.26.15 (1).jpeg" alt="Grupo com telescópio - PEP Mauá" onerror="this.src='https://placehold.co/800x400?text=FOTO+9'">
-        <div class="legenda"><strong>Imagem 9</strong><br><strong>Data:</strong> 19/07/2025 | <strong>Local:</strong> PEP Mauá, Resende/RJ<br>Grupo de participantes em atividade para observação de manchas solares.</div>
+        <img src="foto9-grupo-telescopio.JPG" alt="Grupo com telescópio - PEP Mauá" onerror="this.src='https://placehold.co/800x400?text=FOTO+9'">
+        <div class="legenda"><strong>Imagem 9</strong><br><strong>Data:</strong> 19/07/2025 | <strong>Local:</strong> PEP Mauá, Resende/RJ<br>Grupo de participantes em atividade para observação de manchas solares.<br><a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" class="instagram-link">📷 Ver mais no Instagram @astroturismo.agulhasnegras</a></div>
     </div>
 
-    <!-- Imagem 10 - Equipamentos -->
+    <!-- Imagem 10 - Equipamentos com link -->
     <div class="card-imagem">
         <img src="WhatsApp Image 2026-04-05 at 13.26.16.jpeg" alt="Equipamentos" onerror="this.src='https://placehold.co/800x400?text=FOTO+10'">
-        <div class="legenda"><strong>Imagem 10</strong><br><strong>Data:</strong> 19/07/2025 | <strong>Local:</strong> Visconde de Mauá, Resende/RJ<br>Instrumentação: Telescópio para observação solar e noturna.</div>
+        <div class="legenda"><strong>Imagem 10</strong><br><strong>Data:</strong> 19/07/2025 | <strong>Local:</strong> Visconde de Mauá, Resende/RJ<br>Instrumentação: Telescópio para observação solar e noturna.<br><a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" class="instagram-link">📷 Ver mais no Instagram @astroturismo.agulhasnegras</a></div>
     </div>
 
     <h2>5. LISTAGEM DE EVENTOS E FORMAÇÕES</h2>
@@ -388,9 +447,6 @@
         </tbody>
     </table>
 
-    <!-- ============================================ -->
-    <!-- NOVA SEÇÃO ADICIONADA: EQUIPAMENTO E ASTROFOTOS -->
-    <!-- ============================================ -->
     <h2>6. EQUIPAMENTO UTILIZADO: CELESTRON NEXSTAR SLT 130</h2>
     
     <div class="destaque-equipamento">
@@ -421,28 +477,29 @@
     <h2>7. REGISTROS ASTRONÔMICOS COM NEXSTAR SLT 130 + SMARTPHONE</h2>
     <p style="font-size: 12px; margin-bottom: 10px;"><strong>📸 Imagens obtidas durante sessões gratuitas — método afocal (smartphone acoplado à ocular)</strong></p>
 
-    <!-- Imagem Saturno -->
+    <!-- Imagem Saturno com link Instagram -->
     <div class="card-imagem">
         <img src="WhatsApp Image 2026-04-07 at 07.52.26 (1).jpeg" alt="Saturno registrado com NexStar SLT 130" onerror="this.src='https://placehold.co/800x400?text=Saturno'">
         <div class="legenda-astros">
             <strong>🪐 Saturno</strong><br>
             📅 09 de dezembro de 2024 | 📍 Pico das Agulhas Negras – Parque Nacional do Itatiaia<br>
             🔭 Telescópio Celestron NexStar SLT 130 (130mm f/5) | Ocular 9mm | Método afocal com smartphone<br>
-            🌌 Sessão gratuita de astroturismo — rastreamento automático mantendo o planeta centralizado mesmo em alta ampliação.
+            🌌 Sessão gratuita de astroturismo — rastreamento automático mantendo o planeta centralizado mesmo em alta ampliação.<br>
+            <a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" class="instagram-link">📷 Ver mais astrofotografias no Instagram @astroturismo.agulhasnegras</a>
         </div>
     </div>
 
-    <!-- Imagem Júpiter e luas -->
+    <!-- Imagem Júpiter e luas com link Instagram -->
     <div class="card-imagem">
         <img src="WhatsApp Image 2026-04-07 at 07.52.26.jpeg" alt="Júpiter e luas com NexStar SLT 130" onerror="this.src='https://placehold.co/800x400?text=J%C3%BApiter'">
         <div class="legenda-astros">
             <strong>🪐 Júpiter e suas luas</strong><br>
             📅 09 de dezembro de 2024 | 📍 Pico das Agulhas Negras – Parque Nacional do Itatiaia<br>
             🔭 Telescópio Celestron NexStar SLT 130 (130mm f/5) | Ocular 9mm | Método afocal com smartphone<br>
-            🌌 Registro das luas galileanas (Io, Europa, Ganimedes e Calisto) orbitando o gigante gasoso.
+            🌌 Registro das luas galileanas (Io, Europa, Ganimedes e Calisto) orbitando o gigante gasoso.<br>
+            <a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" class="instagram-link">📷 Ver mais astrofotografias no Instagram @astroturismo.agulhasnegras</a>
         </div>
     </div>
-
 
     <h2>8. DOCUMENTOS COMPROBATÓRIOS (ANEXOS)</h2>
     <div class="anexos">
@@ -457,6 +514,7 @@
     <p>📸 <strong>Instagram profissional:</strong> <a href="https://instagram.com/astroturismo.agulhasnegras" target="_blank" style="color: #1a4d8c; text-decoration: none;">@astroturismo.agulhasnegras</a> – registros de eventos noturnos, astrofotografias e depoimentos de participantes.</p>
     <p>🔭 <strong>Formação UFSC:</strong> Astronomia e Astrofísica – base científica para condução de eventos de observação celeste.</p>
     <p>🆔 <strong>CADASTUR:</strong> Guia Regional - RJ e Excursão Nacional - Brasil/América do Sul</p>
+    <p>📄 <strong>Portfólio completo online:</strong> <a href="#" class="portfolio-link">📂 Clique aqui para acessar o portfólio completo do proponente</a> (documento atual em formato HTML/CSS, compatível com edital SECEC/RJ)</p>
 
     <h2>10. DECLARAÇÃO DE VERACIDADE</h2>
     <div class="declaracao">
